@@ -1,0 +1,43 @@
+[build-system]
+# AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
+requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5", "numpy", "scikit-learn", "scipy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dp-random-forest"
+description = "Differentially private random forest experiments"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "setuptools",
+    "hydra-core",
+    "diffprivlib",
+    "opendp",
+    "ucimlrepo",
+    "folktables",
+    "matplotlib",
+    "omegaconf",
+    "tqdm",
+    "joblib",
+    "importlib-metadata",
+]
+
+[project.optional-dependencies]
+testing = [
+    "setuptools",
+    "pytest",
+    "pytest-cov",
+]
+
+#[tool.setuptools_scm]
+# For smarter version schemes and other configuration options,
+# check out https://github.com/pypa/setuptools_scm
+#version_scheme = "no-guess-dev"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,4 @@
+name: moonsunbalanced
+n_samples: 10000
+noise: 0.125
+center: 2

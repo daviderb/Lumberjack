@@ -1,0 +1,11 @@
+name: dp_sparse_random_forest
+n_estimators: 1
+epsilon: 4.0
+delta: 1e-6
+splitting_fraction: 0.7
+split_threshold: null
+leaf_algorithm: exponential_mechanism
+max_depth: 90
+random_state: 85
+n_jobs: null
+verbose: 1

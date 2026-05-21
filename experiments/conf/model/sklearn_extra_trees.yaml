@@ -1,0 +1,12 @@
+name: sklearn_extra_trees
+epsilon: inf
+n_estimators: 50
+max_depth: 60
+min_samples_split: 500
+min_samples_leaf: 1
+max_features: 1
+bootstrap: false
+criterion: gini
+n_jobs: -1
+random_state: 42
+verbose: 0

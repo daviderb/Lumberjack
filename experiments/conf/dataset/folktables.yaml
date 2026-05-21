@@ -1,0 +1,14 @@
+name: folktables
+# income, employment, public_coverage, mobility, travel_time
+task: income
+survey_year: 2018
+horizon: 1-Year
+survey: person
+states: [CA]
+download: false
+test_size: 0.1
+random_state: 42
+categorical_mode: auto
+categorical_max_unique: 32
+one_hot_encode: true
+sparse_dtype: false
