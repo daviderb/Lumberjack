@@ -24,7 +24,7 @@ TREE_STATS_MODELS = {
     "dp_sparse_random_forest",
 }
 
-from dp_random_forest.algorithms import DPExtraTreesClassifier, DPSparseExtraTreesClassifier
+from dp_random_forest.algorithms import DPSparseExtraTreesClassifier
 
 def getSparseForest(bounds, feature_names, categorical_features):
     return DPSparseExtraTreesClassifier(
