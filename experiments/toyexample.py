@@ -5,8 +5,6 @@ import numpy as np
 # Ensure local src/ is importable even if .pth processing is skipped.
 repo_root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(repo_root / "src"))
-# The diffprivlib baseline is vendored under src/differential-privacy-library.
-sys.path.insert(0, str(repo_root / "src" / "differential-privacy-library"))
 
 from dp_random_forest.algorithms import get_model
 from dp_random_forest.datasets import get_dataset
