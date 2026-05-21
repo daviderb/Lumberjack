@@ -189,17 +189,6 @@ def get_folktables_dataset(cfg):
     )
     one_hot_encode = bool(getattr(cfg.dataset, "one_hot_encode", False))
     sparse_dtype = bool(getattr(cfg.dataset, "sparse_dtype", True))
-    dense_ordinal_models = {
-        "diffprivlib_random_forest",
-        "notebook_dprf",
-        "DPRF_Forest",
-        "ssuihko_dprf",
-        "SNR_DP_forest",
-        "smooth_random_forest",
-    }
-    if getattr(getattr(cfg, "model", None), "name", None) in dense_ordinal_models:
-        one_hot_encode = False
-        sparse_dtype = False
 
     if one_hot_encode:
         X_processed, processed_feature_names, categorical_feature_names, categorical_sizes = _encode_folktables_categoricals(

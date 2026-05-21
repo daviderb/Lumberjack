@@ -87,16 +87,6 @@ def get_adult_dataset(cfg):
     }
     categorical_columns = list(categoricals_dict.keys())
     one_hot_encode = bool(getattr(cfg.dataset, "one_hot_encode", False))
-    dense_ordinal_models = {
-        "diffprivlib_random_forest",
-        "notebook_dprf",
-        "DPRF_Forest",
-        "ssuihko_dprf",
-        "SNR_DP_forest",
-        "smooth_random_forest",
-    }
-    if getattr(getattr(cfg, "model", None), "name", None) in dense_ordinal_models:
-        one_hot_encode = False
 
 
     continuous_columns = [
