@@ -1,7 +1,13 @@
-# DP Lumberjack
+# Lumberjack
 
-DP Lumberjack is a Differentially Private Random Forest algorithm.
+This repo contains the python prototype of Lumberjack used in the paper [Lumberjack: Better Differentially Private Random Forests through Heavy Hitter Detection in Trees](https://arxiv.org/abs/2605.22756).
+
+Lumberjack is a Differentially Private Random Forest algorithm for classification tasks. 
 The project uses Hydra configs to choose a dataset, choose a model, and run the experiment from `experiments/run.py`.
+
+NOTE: The implementation ignores potential issues with floating points. The code should not be used in production environments as-is. A secure implementation should use trusted DP primitives such as those avilable in the OpenDP library.  
+
+Contact Christian Janos Lebeda or David Erb for questions.
 
 ## Setup
 
